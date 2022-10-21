@@ -9,8 +9,8 @@
 import WENS, { getWensAddress } from 'wens'
 
 
-
-const wens = new WENS({ provider, WENSAddress: getWensAddress('1') })
+const chainID = 5
+const wens = new WENS({ provider, WENSAddress: getWensAddress(chainID) })
 
 wens.name('resolver.ethw').getAddress() // 0x123
 ```
