@@ -1,0 +1,3 @@
+{
+  "branches": ["release", {name: 'alpha', prerelease: true}]
+}
