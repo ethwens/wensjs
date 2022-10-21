@@ -34,16 +34,6 @@ jobs:
 #          token: ${{secrets.CODECOV_TOKEN}}
       - name: Release
         uses: codfish/semantic-release-action@master
-        with:
-          # specify default branches to add support for the `main` branch
-          # which semantic-release doesn't have as a default yet.
-          branches: |
-            [
-              {
-                name: 'alpha',
-                prerelease: true
-              }
-            ]
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
