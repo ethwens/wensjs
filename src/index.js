@@ -17,6 +17,14 @@ function getWensAddress(networkId) {
   }[networkId]
 }
 
+function getDefaultProvider(networkId) {
+  const rpc = {
+    [GOERLI_CHAIN_ID]: 'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+    [ETHW_CHAIN_ID]: 'https://mainnet.ethereumpow.org/'
+  }[networkId]
+  return new ethers.providers.JsonRpcProvider(rpc)
+}
+
 function getResolverContract({ address, provider }) {
   return new ethers.Contract(address, resolverABI, provider)
 }
@@ -263,11 +271,15 @@ export default class WENS {
   constructor(options) {
     const { networkId, provider, wensAddress } = options
     let ethersProvider
-    if (Provider.isProvider(provider)) {
-      //detect ethersProvider
-      ethersProvider = provider
-    } else {
-      ethersProvider = new ethers.providers.Web3Provider(provider)
+    if(provider) {
+      if (Provider.isProvider(provider)) {
+        //detect ethersProvider
+        ethersProvider = provider
+      } else {
+        ethersProvider = new ethers.providers.Web3Provider(provider)
+      }
+    }else {
+      ethersProvider = getDefaultProvider(networkId)
     }
     this.provider = ethersProvider
     this.signer = ethersProvider.getSigner()

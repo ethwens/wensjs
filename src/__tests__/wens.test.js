@@ -1,22 +1,14 @@
 /**
  * @jest-environment node
  */
-import WENS, {
-  getWensAddress,
-} from '../index.js'
+import WENS from '../index.js'
 import '../testing-utils/extendExpect'
-import Web3 from 'web3'
 
-let provider
 let wens
-let ensContract
-let signer
 
 describe('Blockchain tests', () => {
   beforeAll(async () => {
-    provider = new Web3.providers.HttpProvider('https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161')
-    const wensAddress = getWensAddress(5);
-    wens = new WENS({ provider, wensAddress })
+    wens = new WENS({ networkId: 5 })
   }, 1000000)
 
 
@@ -45,7 +37,7 @@ describe('Blockchain tests', () => {
   describe('Resolver', () => {
     test('should get name by address', async () => {
       const {name} = await wens.getName('0xaEAbD4022bC6C1e7EB1389E9A47ECc28182db55a')
-      expect(name).toEqual('ablll.ethw')
+      expect(name).toEqual('abcd.ethw')
     })
   })
 })
