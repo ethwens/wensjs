@@ -13,7 +13,7 @@ const ETHW_CHAIN_ID = 10001
 function getWensAddress(networkId) {
   return {
     [GOERLI_CHAIN_ID]: '0x66dB8F7D8eeB8657B1422aB9FDbC501D13f10ef2',
-    [ETHW_CHAIN_ID]: ''
+    [ETHW_CHAIN_ID]: '0x8f981639cf5c8962c2c7298469ea3215b74f3cfd'
   }[networkId]
 }
 
