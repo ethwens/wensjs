@@ -15,14 +15,14 @@ describe('Blockchain tests', () => {
   describe('Registry', () => {
     test('should get address by name', async () => {
       const address = await wens.name('wagmi33.ethw').getAddress()
-      expect(address).toEqual('0xaEAbD4022bC6C1e7EB1389E9A47ECc28182db55a')
+      expect(address).toEqual('0x7B2353c81a98bC0a09d47D22ef7AcaE558986CFa')
     })
 
     test('should getResolver', async () => {
       const resolver = await wens.name('wagmi33.ethw').getResolver()
       expect(resolver).toBeHex()
       expect(resolver).toBeEthAddress()
-      expect(resolver).toBe('0xA14553f48184d12a92b11f8CaBA813754E7Ec685')
+      expect(resolver).toBe('0x74fC211a8bd0Cb6ad57a2DD2a47ffC5b6417a822')
     })
 
     test('should getResolver when not set', async () => {
@@ -36,8 +36,8 @@ describe('Blockchain tests', () => {
 
   describe('Resolver', () => {
     test('should get name by address', async () => {
-      const {name} = await wens.getName('0xaEAbD4022bC6C1e7EB1389E9A47ECc28182db55a')
-      expect(name).toEqual('abcd.ethw')
+      const {name} = await wens.getName('0x7B2353c81a98bC0a09d47D22ef7AcaE558986CFa')
+      expect(name).toEqual('wagmi33.ethw')
     })
   })
 })
