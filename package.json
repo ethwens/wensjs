@@ -4,7 +4,8 @@
   "description": "wensjs",
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "abis"
   ],
   "publishConfig": {
      "access": "public"
