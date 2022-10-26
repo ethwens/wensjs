@@ -15,6 +15,8 @@ const wens = new WENS({ networkId })
 wens.name('wens.ethw').getAddress() // 0x123
 
 wens.getName('0x111')  //xxx.ethw
+
+wens.name('wens.ethw').getOwner()  // 0x123
 ```
 
 ### Test

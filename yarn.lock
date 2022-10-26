@@ -1025,7 +1025,7 @@
     "@openzeppelin/contracts" "^4.1.0"
     dns-packet "^5.3.0"
 
-"@ensdomains/ens@0.4.5", "@ensdomains/ens@^0.4.4":
+"@ensdomains/ens@^0.4.4":
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/@ensdomains/ens/-/ens-0.4.5.tgz#e0aebc005afdc066447c6e22feb4eda89a5edbfc"
   integrity sha512-JSvpj1iNMFjK6K+uVl4unqMoa9rf5jopb8cya5UGBWz23Nw8hSNT7efgUx4BTlAPAgpNlEioUfeTyQ6J9ZvTVw==
@@ -1067,7 +1067,7 @@
     hardhat-abi-exporter "^2.8.0"
     hardhat-deploy-ethers "^0.3.0-beta.13"
 
-"@ensdomains/resolver@0.2.4", "@ensdomains/resolver@^0.2.4":
+"@ensdomains/resolver@^0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@ensdomains/resolver/-/resolver-0.2.4.tgz#c10fe28bf5efbf49bff4666d909aed0265efbc89"
   integrity sha512-bvaTH34PMCbv6anRa9I/0zjLJgY4EuznbEMgbV77JBCQ9KNC46rzi0avuxpOfu+xDjPEtSFGqVEOr5GlUSGudA==
@@ -2309,6 +2309,18 @@
   integrity sha512-yEJzHoxf6SyQGhBhIYGXQDSCkJjB6HohDShto7m8vaKg9Yp0Yn8+71J9eakh2bnPg6BfsH9PRMhiRTZnd4eXGQ==
   dependencies:
     "@types/yargs-parser" "*"
+
+"@wensdomains/wensjs@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@wensdomains/wensjs/-/wensjs-1.0.1.tgz#74409b969b2d0383b6a4761a6ee6e3fe467ad46c"
+  integrity sha512-gjBWkHijyxm74A11SF0Vz3n6X+iJDDJO/obMDS7PjhuRptJibxJA3rBY+h/b0o41SsmHm3qFcTYhZErFrRp/vA==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@ensdomains/address-encoder" "^0.1.7"
+    content-hash "^2.5.2"
+    eth-ens-namehash "^2.0.8"
+    ethers "^5.0.13"
+    js-sha3 "^0.8.0"
 
 "@yarnpkg/lockfile@^1.1.0":
   version "1.1.0"

@@ -31,6 +31,13 @@ describe('Blockchain tests', () => {
       expect(resolver).toBeEthAddress()
       expect(resolver).toBe('0x0000000000000000000000000000000000000000')
     })
+
+    test('should getOwner from name', async () => {
+      const owner = await wens.name('wagmi33.ethw').getOwner()
+      expect(owner).toBeHex()
+      expect(owner).toBeEthAddress()
+      expect(owner).toBe('0x7B2353c81a98bC0a09d47D22ef7AcaE558986CFa')
+    })
   })
 
 
